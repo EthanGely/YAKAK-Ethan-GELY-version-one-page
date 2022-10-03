@@ -1,2 +1,3 @@
 <php
-     header:"Location: /src/include/gabarit_site/accueil.php";
+     header("Location: ./accueil.php");
+     die();
