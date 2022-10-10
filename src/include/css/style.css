@@ -1,0 +1,76 @@
+body {
+    width: 100%;
+    padding: 1rem;
+}
+
+
+h1, h2, h3 {
+    font-family: Barlow Condensed,Roboto,PT Sans Narrow Bold,DIN Condensed Bold,Calibri,sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 550;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.menu {
+
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content {
+    text-align: center;
+    width: 100%;
+    padding-top: 4rem;
+}
+
+.offresDest table {
+    width: 100%;
+    padding: 2rem;
+    border-collapse: collapse;
+}
+
+.offresDest table thead {
+    font-family: Barlow Condensed,Roboto,PT Sans Narrow Bold,DIN Condensed Bold,Calibri,sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    background-color: #e1fcfa;
+
+}
+
+.offresDest table thead tr td{
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.offresDest table tbody tr td {
+    width: fit-content;
+}
+
+.offresDest table tbody tr td img {
+    width: 20rem;
+    height: auto;
+}
