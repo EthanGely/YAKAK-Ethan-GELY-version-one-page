@@ -1,0 +1,26 @@
+[
+  {
+    "image": "espagne.jpeg",
+    "destination" : "Espagne",
+    "offre" : "Circuit plage, hôtel 4 *",
+    "prix" : "800 €"
+  },
+  {
+    "image": "maroc.jpg",
+    "destination" : "Maroc",
+    "offre" : "Circuit Oasis, hôtel 4*",
+    "prix" : "1000 €"
+  },
+  {
+    "image": "bresil.jpg",
+    "destination" : "Brésil",
+    "offre" : "Circuit Favellas, hôtel 4 *",
+    "prix" : "2000 €"
+  },
+  {
+    "image": "mont_fuji.jpg",
+    "destination" : "Japon",
+    "offre" : "Circuit Cerisiers, hôtel 4 *",
+    "prix" : "2500 €"
+  }
+]
