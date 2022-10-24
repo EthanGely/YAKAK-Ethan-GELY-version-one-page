@@ -1,0 +1,33 @@
+<div class="flex">
+    <div class="titre">
+        <h1>YAKAK Grenoble</h1>
+    </div>
+
+    <div class="menu">
+        <menu class="flex">
+            <li><a id="accueil" href="accueil.html">Accueil</a></li>
+            <li><a id="destinations" href="destinations.html">Destination</a></li>
+            <li>
+                <button id="perso" onclick="actionSousMenu('sousMenu1')">Mon espace</button>
+                <div class="sousMenu" id="sousMenu1">
+                    <ul class="flex column">
+                        <li><a id="connexion" href="perso.html#connexion">Connexion</a></li>
+                        <li><a id="infos" href="perso.html#informations">Mes informations</a></li>
+                        <li><a id="msg" href="perso.html#messages">Messagerie</a></li>
+                        <li><a id="hist" href="perso.html#historique">Historique</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <button id="voyage" onclick="actionSousMenu('sousMenu2')">Voyage virtuel</button>
+                <div class="sousMenu" id="sousMenu2">
+                    <ul class="flex column">
+                        <li><a id="voyageAudio" href="voyageAudio.html">Voyage audio</a></li>
+                        <li><a id="voyageVideo" href="voyageVideo.html">Voyage vidéo</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a id="contact" href="contact.html">Contactez-nous</a></li>
+        </menu>
+    </div>
+</div>

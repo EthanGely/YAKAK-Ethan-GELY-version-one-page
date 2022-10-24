@@ -3,7 +3,7 @@ var destinations = [];
 
 
 //Fonction lancée à l'initialisation
-function init() {
+function init2() {
     //On attend de récupérer les destinations, puis on les affiche
     getDestinations().then(r => afficheDestinations());
 }
@@ -37,7 +37,7 @@ async function getDestinations() {
 
 function afficheDestinations() {
     //On récupère le corps du tableau et on le vide
-    let tbody = document.getElementById("destinations").querySelector("tbody");
+    let tbody = document.getElementById("bodyDestination");
     tbody.innerHTML = "";
 
     //Pour chaque nouvelle destination

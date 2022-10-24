@@ -3,26 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>YAKAK - Mon espace</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../jquery/3.6.0/jquery.min.js"></script>
+    <script src="../javaScript/initPage.js"></script>
 </head>
 <body>
 
-<script>
-    $(function () {
-        $("#header").load("header.html");
-        $("#footer").load("footer.html");
-    });
-</script>
-
-<div id="header"></div>
+<header id="header"></header>
 
 <div class="content">
     <ul class="menu">
         <li>
-            <a href="">Connexion</a>
+            <a href="" id="connexion">Connexion</a>
         </li>
         
         <li>
-            <a href="">Mes informations</a>
+            <a href="" id="informations">Mes informations</a>
             <div class="sousMenu1">
                 <ol>
                     <li>Jason Bourne</li>
@@ -31,8 +27,8 @@
                 </ol>
             </div>
         </li>
-        <li><a href="">Messagerie</a></li>
-        <li><a href="">Historique des commandes</a></li>
+        <li><a href="" id="msg">Messagerie</a></li>
+        <li><a href="" id="hist">Historique des commandes</a></li>
     </ul>
 </div>
 
@@ -91,14 +87,7 @@
 
 
 <h2>Historique des commandes</h2>
-<?php }else{?>
 
-<?php
-    }
-?>
-
-<?php
-    include_once "./footer.html";
-?>
+<footer id="footer"></footer>
 </body>
 </html>
