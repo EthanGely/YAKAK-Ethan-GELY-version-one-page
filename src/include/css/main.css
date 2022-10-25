@@ -1,16 +1,86 @@
+@font-face {
+    font-family: Coconut;
+    src: url('./fonts/CoconutIsland.otf');
+}
+
+@font-face {
+    font-family: Bamboo;
+    src: url('./fonts/Bamboo.ttf');
+}
+
+@font-face {
+    font-family: Tropical;
+    src: url('./fonts/Tropical.ttf');
+}
+
 
 header {
+    position: sticky;
+    top: 0;
+    background-color: #85d7dc;
+    padding: 0.25rem 0.5rem;
+    z-index: 2;
+}
 
+footer {
+    background-color: #85d7dc;
+    padding: 0.25rem 0.5rem;
+    z-index: 2;
+    text-align: center;
+}
+
+footer .titre {
+    margin: auto;
 }
 
 body {
     width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+a button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    background: #00417d;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s;
+}
+
+a button:hover {
+    background: #0054a1;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 95%;
+    top: 20rem;
+    display:inline-block
+}
+
+.sticky a button {
     padding: 1rem;
 }
 
 
 h1, h2, h3 {
     font-family: Barlow Condensed, Roboto, PT Sans Narrow Bold, DIN Condensed Bold, Calibri, sans-serif;
+}
+
+header h1 {
+    font-family: Coconut, sans-serif;
+}
+
+header h1 span {
+    font-family: Bamboo, sans-serif;
+}
+
+.yakak {
+    font-family: Coconut, sans-serif;
 }
 
 h1 {
@@ -25,12 +95,8 @@ h2 {
 }
 
 h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 300;
-}
-
-.menu {
-
 }
 
 .menu {
@@ -41,28 +107,130 @@ h3 {
     margin: 0;
 }
 
-.menu li {
-    margin-right: auto;
-    margin-left: auto;
+.menu menu {
+    width: 100%;
+    list-style-type: none;
+}
+
+.menu menu li {
+    margin: auto;
+}
+
+.menu menu li a {
+    color: black;
+    text-decoration: none;
+    font-family: Tropical, sans-serif;
+    font-size: 1.35rem;
+    position: relative;
+    display: inline-block;
+}
+
+.menu menu li button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: Tropical, sans-serif;
+    font-size: 1.35rem;
+    position: relative;
+    display: inline-block;
+    padding: 0;
+}
+
+.menu menu li .active::before {
+    width: 100%;
+}
+
+
+.menu menu li .sousMenu {
+    display: none;
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    width: 60%;
+    top: 100%;
+    padding: 1rem 0;
+    background: #90eff5;
+    border-top: 1px solid black;
+    box-shadow: 0px 5px 22px black;
+}
+
+.menu .sousMenu a {
+    font-size: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.menu a::before, .menu button::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -0.2rem;
+    background: black;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.menu a:hover::before, menu button:hover::before {
+    width: 100%;
+}
+
+.accroche img {
+    width: 100%;
+}
+
+.accroche .titre {
+    position: absolute;
+    transform: translateY(-150%);
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+}
+
+.accroche .titre h2 {
+    font-size: 10rem;
+    font-family: Coconut;
+}
+
+.accroche .paragraphe {
+    position: absolute;
+    transform: translateY(-101%);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+
+.paragraphe {
+    font-size: 1.25rem;
 }
 
 .content {
     text-align: center;
     width: 100%;
     padding-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.offresDest {
+    padding: 2rem;
 }
 
 .offresDest table {
     width: 100%;
     padding: 2rem;
     border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 0 #666;
 }
 
 .offresDest table thead {
     font-family: Barlow Condensed, Roboto, PT Sans Narrow Bold, DIN Condensed Bold, Calibri, sans-serif;
     font-size: 1.3rem;
     font-weight: 800;
-    background-color: #e1fcfa;
+    background-color: #90eff57d;
 
 }
 
@@ -71,8 +239,38 @@ h3 {
     padding-top: 1rem;
 }
 
+.offresDest table tbody tr:nth-child(even){
+    background: #90eff57d;
+}
+
+.offresDest table tbody tr:nth-child(odd){
+    background: #34d3d314;
+}
+
+
 .offresDest table tbody tr td {
     width: fit-content;
+    padding: 0 2rem;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+
+.offresDest table tbody tr td div {
+    width: fit-content;
+    position: relative;
+    margin: 2rem auto;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 0 #666;
+}
+
+.offresDest table tbody tr td div p {
+    position: absolute;
+    width: 100%;
+    transform: translateY(-100%);
+    margin: 0;
+    padding: 0.5rem 0;
+    background: rgba(133, 215, 220, 0.8);
 }
 
 .offresDest table tbody tr td img {
@@ -80,13 +278,35 @@ h3 {
     height: auto;
 }
 
-.flex {
-    display: flex;
+.offresDest table tbody tr td button {
+    position: relative;
+    padding: 1rem 3.25rem;
+    border: 0;
+    border-radius: 2rem;
+    background: #00417d;
+    color: white;
+    cursor: pointer;
 }
 
-body {
-    width: 100%;
-    padding: 1rem;
+.offresDest table tbody tr td button:hover {
+    background: #0054a1;
+}
+
+.offresDest table tbody tr td button::before {
+    content: '✈';
+    position: absolute;
+    left: 10%;
+    font-size: 1.5rem;
+    transform: translateY(25%);
+    top: 0;
+    transition: all 0.3s;
+}
+.offresDest table tbody tr td button:hover::before {
+    left: 82%;
+}
+
+.flex {
+    display: flex;
 }
 
 

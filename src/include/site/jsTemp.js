@@ -47,7 +47,9 @@ function afficheDestinations() {
 
         //Puis une cellule, dans laquelle on ajoute le nom de la destination (avec une maj au début)
         let td1 = document.createElement("td");
-        td1.innerText = destinations[i]["destination"].substring(0,1).toUpperCase() + destinations[i]["destination"].substring(1);
+        let div = document.createElement("div");
+        let p = document.createElement("p");
+        p.innerText = destinations[i]["destination"].substring(0,1).toUpperCase() + destinations[i]["destination"].substring(1);
 
         //On crée une image, puis selon le type (lien internet ou lien local) on ajoute la source
         let img = document.createElement("img");
@@ -60,7 +62,9 @@ function afficheDestinations() {
         img.alt = "Image " + destinations[i]["destination"];
 
         //On ajoute l'image dans la balise <td>, puis on ajoute ce <td> dans le <tr>
-        td1.appendChild(img);
+        div.appendChild(img);
+        div.appendChild(p);
+        td1.appendChild(div);
         tr.appendChild(td1);
 
         //On crée un autre <td>, puis on note le nom de l'offre
