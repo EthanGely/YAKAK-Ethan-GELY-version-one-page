@@ -3,37 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>YAKAK - Voyage vidéo</title>
+    <link rel="stylesheet" href="../css/main.css">
     <script src="../jquery/3.6.0/jquery.min.js"></script>
+    <script src="../javaScript/initPage.js"></script>
 </head>
 <body>
 
-<script>
-    $(function () {
-        $("#header").load("header.html");
-        $("#footer").load("footer.html");
-    });
-</script>
 
-<div id="header"></div>
+<header id="header"></header>
 
-<div class="content fullpage">
-    <div class="fullpage">
-        <video width="100%" height="100%" autoplay loop muted preload="auto">
-            <source src="../videos/sound1.mp4" type="video/mp4">
+<div class="content">
+    <div class="paragraphe">
+        <h2>En exclusivité sur <span class="yakak">YAKAK</span></h2>
+        <p>Découvrez en grande exclusivité sur <span class="yakak">YAKAK</span> les voyages virtuels vidéos. Explorez les mystères de la forêt Amazonienne sans bouger de votre canapé en cuir humain.
+            <br>Bien évidemment, ces voyages sont totalement gratuits car en acceptant les conditions d'utilisations, vous nous avez déjà vendu votre âme.</p>
+        <a href="./voyageAudio.html"><button>Découvrez les voyages audios</button></a>
+    </div>
+
+
+
+    <div class="videoContent">
+        <div class="videoTitle">
+            <h2>Déployez vos ailes</h2>
+            <p>Prenez votre envol et découvrez la ville sous un nouvel angle. Plongez entre les grattes-ciels et découvrez les rues de New-York City tel un pigeon.</p>
+        </div>
+        <video width="100%" height="100%" autoplay loop muted preload="auto" controls>
+            <source src="../videos/new-york.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la lecture de cette vidéo. Vous pouvez tout de même profiter du voyage
             audio!
         </video>
-        <div id="titleVid">
-            <h2>Titre de l'audio</h2>
-            <audio src="../audio/voyage1.mp3" autoplay></audio>
-        </div>
     </div>
 
-    <div>
-        <h2>TEST</h2>
+    <div class="videoContent">
+        <div class="videoTitle">
+            <h2>Bravez les courants</h2>
+            <p>Plongez-vous dans les rapides Canadiens et défiez les eaux torrentielles. Rassurez-vous, les éclaboussures ne passent pas à travers l'écran.</p>
+        </div>
+        <video width="100%" height="100%" loop muted preload="auto" controls>
+            <source src="../videos/kayak.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de cette vidéo. Vous pouvez tout de même profiter du voyage
+            audio!
+        </video>
     </div>
+
 </div>
 
-<div id="footer"></div>
+<footer id="footer"></footer>
 </body>
 </html>

@@ -64,6 +64,7 @@ a button:hover {
 
 .sticky a button {
     padding: 1rem;
+    font-size: 2rem;
 }
 
 
@@ -379,11 +380,27 @@ h3 {
 }
 
 
-.fullpage {
+
+.videoContent {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
+}
+
+.videoContent .videoTitle, .audioContent .audioTitle {
+    position: relative;
+    transform: translateY(99%);
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem;
+    color: white;
+}
+
+.videoContent video {
+    border-radius: 2rem;
+    overflow: hidden;
 }
 
 #titleVid {
@@ -394,4 +411,27 @@ h3 {
     color: gray;
     text-align: center;
     background-color: black;
+}
+
+.audioContent {
+    border-radius: 2rem;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.imgAudio {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+audio {
+    width: 100%;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transform: translateY(-105%);
 }

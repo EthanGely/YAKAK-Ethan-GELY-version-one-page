@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link rel="stylesheet" href="main.css">
     <meta charset="UTF-8">
     <title>YAKAK - Voyage audio</title>
+    <link rel="stylesheet" href="../css/main.css">
     <script src="../jquery/3.6.0/jquery.min.js"></script>
+    <script src="../javaScript/initPage.js"></script>
 </head>
-<body style="margin:0;">
+<body>
 
-<script>
-  $(function(){
-    $("#header").load("header.html");
-    $("#footer").load("footer.html");
-  });
-</script>
 
-<div id="header"></div>
+<header id="header"></header>
 
-<div class="content fullpage">
-    <div class="fullpage">
-        <video width="100%" height="100%" autoplay loop muted preload="auto">
-            <source src="../videos/sound1.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de cette vidéo. Vous pouvez tout de même profiter du voyage audio!
-        </video>
-        <div id="titleVid">
-            <h2>Titre de l'audio</h2>
-            <audio src="../audio/voyage1.mp3" autoplay></audio>
+<div class="content">
+    <div class="paragraphe">
+        <h2>En exclusivité sur <span class="yakak">YAKAK</span></h2>
+        <p>Découvrez en grande exclusivité sur <span class="yakak">YAKAK</span> les voyages virtuels audios. Écoutez le
+            bruit de la pluie tomber, le sifflement du vent, ou encore le craquement d'un feu de bois.
+            <br>Bien évidemment, ces voyages sont totalement gratuits car en acceptant les conditions d'utilisations,
+            vous nous avez déjà vendu votre âme.</p>
+        <a href="./voyageVideo.html">
+            <button>Découvrez les voyages vidéos</button>
+        </a>
+    </div>
+
+
+    <div class="audioContent">
+        <div class="audioTitle">
+            <h2>La montagne n'attends que vous</h2>
+            <p>Gravissez des montagnes, et écoutez le bruit de la neige craquer sous vous pas.</p>
         </div>
+        <img src="../images/montagnes.jpg" alt="Montagnes enneigées" class="imgAudio">
+        <audio src="../audio/montagnes.mp3" controls autoplay></audio>
     </div>
 
-    <div>
-        <h2>TEST</h2>
+    <div class="audioContent">
+        <div class="audioTitle">
+            <h2>Réchauffez vous au coin du feu</h2>
+            <p>Préparez-vous un grand bol de chocolat chaud, et détendez-vous au coin d'un chaleureux feu de bois.</p>
+        </div>
+        <img src="../images/fireplace.jpg" alt="Montagnes enneigées" class="imgAudio">
+        <audio src="../audio/fireplace.mp3" controls autoplay></audio>
     </div>
+
+    <div class="audioContent">
+        <div class="audioTitle">
+            <h2>Ecoutez le vent souffler dans vos oreilles</h2>
+            <p>Autumn is coming. Ecoutez le bruit du vent souffler dans les arbres, sans avoir besoin de nettoyer les
+                feuilles tombées dans votre piscine.</p>
+        </div>
+        <img src="../images/wind.jpg" alt="Montagnes enneigées" class="imgAudio">
+        <audio src="../audio/wind.wav" controls autoplay></audio>
+    </div>
+
 </div>
 
-<div id="footer"></div>
+<footer id="footer"></footer>
 </body>
 </html>
