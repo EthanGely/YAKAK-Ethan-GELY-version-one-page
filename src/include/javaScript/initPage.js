@@ -31,7 +31,12 @@ function init(){
 function actionSousMenu(id) {
     var sousMenu = document.getElementById(id);
     var etat = sousMenu.style.display;
-    fermerSousMenu();
+    if (id.split("-")[1] != null){
+        fermerSousMenu(id.split("-")[0]);
+    }else{
+        fermerSousMenu();
+    }
+
 
     if (etat == "block") {
         sousMenu.style.display = "none";
@@ -41,11 +46,15 @@ function actionSousMenu(id) {
 
 }
 
-function fermerSousMenu(id) {
+function fermerSousMenu(keepOpen) {
     var sousMenu = document.getElementsByClassName("sousMenu");
+    var sousMenuOuvert = document.getElementById(keepOpen);
     for (var i = 0; i < sousMenu.length; i++) {
         sousMenu[i].style.display = "none";
     }
+    if (sousMenuOuvert != null)
+    sousMenuOuvert.style.display = "block";
+
 
 }
 

@@ -1,6 +1,6 @@
 <div class="flex">
     <div class="titre">
-        <h1>YAKAK <span>Grenoble</span></h1>
+        <a href="accueil.html" class="noStyle"><h1>YAKAK <span>Grenoble</span></h1></a>
     </div>
 
     <div class="menu">
@@ -12,7 +12,16 @@
                 <div class="sousMenu" id="sousMenu1">
                     <ul class="flex column">
                         <li><a id="connexion" href="perso.html#connexion">Connexion</a></li>
-                        <li><a id="infos" href="perso.html#informations">Mes informations</a></li>
+                        <li>
+                            <button id="infos" onclick="actionSousMenu('sousMenu1-1')">Mes informations</button>
+                            <div class="sousMenu sousMenu1" id="sousMenu1-1">
+                                <ul>
+                                    <li><a href="perso.html">Nom et prénom</a></li>
+                                    <li><a href="perso.html">Numéro de téléphone</a></li>
+                                    <li><a href="perso.html">Email</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <li><a id="msg" href="perso.html#messages">Messagerie</a></li>
                         <li><a id="hist" href="perso.html#historique">Historique</a></li>
                     </ul>

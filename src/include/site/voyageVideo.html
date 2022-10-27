@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>YAKAK - Voyage vidéo</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="../images/logoYakak.svg" type="image/x-icon">
     <script src="../jquery/3.6.0/jquery.min.js"></script>
     <script src="../javaScript/initPage.js"></script>
 </head>
@@ -17,6 +18,8 @@
         <h2>En exclusivité sur <span class="yakak">YAKAK</span></h2>
         <p>Découvrez en grande exclusivité sur <span class="yakak">YAKAK</span> les voyages virtuels vidéos. Explorez les mystères de la forêt Amazonienne sans bouger de votre canapé en cuir humain.
             <br>Bien évidemment, ces voyages sont totalement gratuits car en acceptant les conditions d'utilisations, vous nous avez déjà vendu votre âme.</p>
+        <button id="btnWarning" class="btn" onclick="afficherWarning()">L'audio ne se lance pas automatiquement ?</button>
+        <p class="warning visuallyHidden">Si vous êtes sur Firefox et que la lecture automatique ne fonctionne pas, cherchez à gauche de l'URL</p>
         <a href="./voyageAudio.html"><button>Découvrez les voyages audios</button></a>
     </div>
 

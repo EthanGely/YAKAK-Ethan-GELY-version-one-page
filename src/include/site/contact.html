@@ -1,52 +1,76 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>YAKAK - accueil</title>
-  <link rel="stylesheet" href="../css/main.css">
-  <script src="../jquery/3.6.0/jquery.min.js"></script>
-  <script src="../javaScript/initPage.js"></script>
+    <meta charset="UTF-8">
+    <title>YAKAK - accueil</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="../images/logoYakak.svg" type="image/x-icon">
+    <script src="../jquery/3.6.0/jquery.min.js"></script>
+    <script src="../javaScript/initPage.js"></script>
 </head>
-<body >
+<body>
 
 
 <header id="header"></header>
 
+<div class="accroche">
+    <img src="../images/hublotAvion.png" alt="Vue depuis le hublot d'un avion">
+    <div class="titre">
+        <h2>Contactez nous</h2>
+        <a href="#formContact"><button>Commencer le formulaire</button></a>
+    </div>
+</div>
+
+
 
 <div class="content black">
-  <h2>Contactez nous</h2>
-  <p>Pour contacter YAKAK, il vous suffit de remplir ce court formulaire.<br>Nous répondrons à votre demande dans les plus longs délais acceptables</p>
+    <p>Pour contacter <span class="yakak">YAKAK</span>, il vous suffit de remplir ce court formulaire.<br>
+        Nous répondrons à votre demande dans les plus longs délais acceptables, tout en essayant de rester le plus
+        désagréable possible.</p>
 
-  <div>
-    <form action="">
-      <div>
-        <label for="prenom">Prénom </label>
-        <input type="text" name="prenom" id="prenom">
+    <div>
 
-        <label for="nom">Non </label>
-        <input type="text" name="nom" id="nom" required>
-      </div>
+        <form action="" id="formContact" method="post">
+            <div class="formGroup flex center">
+                <div class="labelGroup">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" name="prenom" id="prenom" placeholder="Ethan">
+                </div>
 
-      <div>
-        <label for="email">Email </label>
-        <input type="email" name="email" id="email" required>
-      </div>
 
-      <div>
-        <label for="tel">Numéro de téléphone </label>
-        <input type="tel" name="tel" id="tel" required>
-      </div>
+                <div class="labelGroup">
+                    <label for="nom">Nom</label>
+                    <input type="text" name="nom" id="nom" placeholder="Gely" required>
+                </div>
 
-      <div>
-        <label for="message">Message </label>
-        <input type="text" name="message" id="message" required>
-      </div>
+            </div>
 
-      <div>
-        <button type="submit">Envoyer</button>
-      </div>
-    </form>
-  </div>
+            <div class="formGroup flex center">
+                <div class="labelGroup">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="nom@exemple.com" required>
+                </div>
+
+                <div class="labelGroup">
+                    <label for="tel">Numéro de téléphone</label>
+                    <input type="tel" name="tel" id="tel" placeholder="07 89 90 91 92" required>
+                </div>
+
+            </div>
+
+            <div class="formGroup flex center">
+                <div class="labelGroup">
+                    <label for="message">Message</label>
+                    <input type="text" name="message" id="message" placeholder="Qu'avez vous sur le coeur ?" required>
+                </div>
+
+            </div>
+
+            <div>
+                <button class="btn" type="submit">Envoyer</button>
+            </div>
+        </form>
+    </div>
 </div>
 
 <footer id="footer"></footer>
