@@ -1,18 +1,21 @@
-$(function(){
-    $("#header").load("common/header.html");
-    $("#footer").load("common/footer.html");
-    $(function() {
-        setTimeout(() => {  init(); }, 500);
+function loadPage(nomPage) {
+    $(function () {
+        $("#body").load("src/include/site/" + nomPage);
+        $(function () {
+            setTimeout(() => {
+                $("#header").load("src/include/site/common/header.html");
+                $("#footer").load("src/include/site/common/footer.html");
+                $(function () {
+                    setTimeout(() => {
+                        init(nomPage.split(".")[0]);
+                    }, 5000);
+                });
+            }, 500);
+        });
     });
+}
 
-});
-
-function init(){
-    var nom = window.location.pathname;
-    nom = nom.split("/");
-    nom = nom[nom.length - 1];
-    nom = nom.substr(0, nom.lastIndexOf("."));
-    nom = nom.replace(new RegExp("(%20|_|-)", "g"), "");
+function init(nom) {
     setTimeout(() => {
         var active = document.getElementById(nom);
         if (active == null) {
@@ -21,26 +24,26 @@ function init(){
             }
         }
         active.classList.add("active");
-        if (nom.includes("voyage")){
+        if (nom.includes("voyage")) {
             document.getElementById("voyage").classList.add('active');
         }
 
-        }, 1000);
+    }, 1000);
 }
 
 function actionSousMenu(id) {
     var sousMenu = document.getElementById(id);
     var etat = sousMenu.style.display;
-    if (id.split("-")[1] != null){
+    if (id.split("-")[1] != null) {
         fermerSousMenu(id.split("-")[0]);
-    }else{
+    } else {
         fermerSousMenu();
     }
 
 
     if (etat == "block") {
         sousMenu.style.display = "none";
-    }else{
+    } else {
         sousMenu.style.display = "block";
     }
 
@@ -53,7 +56,7 @@ function fermerSousMenu(keepOpen) {
         sousMenu[i].style.display = "none";
     }
     if (sousMenuOuvert != null)
-    sousMenuOuvert.style.display = "block";
+        sousMenuOuvert.style.display = "block";
 
 
 }

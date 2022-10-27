@@ -18,7 +18,7 @@ async function getDestinations() {
     //S'il n'y a pas de destinations enregistrées, on ajoute la liste de base (contenue dans un fichier)
     //Et on met le contenu de cette liste dans le local storage
     if (dest == undefined) {
-        const requestURL = '../data/destination.json';
+        const requestURL = 'src/include/data/destination.json';
         const request = new Request(requestURL);
 
         const response = await fetch(request);
@@ -66,7 +66,7 @@ function afficheDestinations() {
             if (destinations[i]["image"].includes("data:image/") || destinations[i]["image"].includes("https://") || destinations[i]["image"].includes("http://")) {
                 img.src = destinations[i]["image"];
             } else {
-                img.src = "../images/" + destinations[i]["image"];
+                img.src = "src/include/images/" + destinations[i]["image"];
             }
             //Puis le texte alt de l'image sera "image" + destination
             img.alt = "Image " + destinations[i]["destination"];

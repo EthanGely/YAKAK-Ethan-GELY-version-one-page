@@ -1,29 +1,29 @@
 <div class="flex">
     <div class="titre">
-        <a href="accueil.html" class="noStyle"><h1>YAKAK <span>Grenoble</span></h1></a>
+        <a onclick="loadPage('accueil.html')" class="noStyle"><h1>YAKAK <span>Grenoble</span></h1></a>
     </div>
 
     <div class="menu">
         <menu class="flex">
-            <li><a id="accueil" href="accueil.html">Accueil</a></li>
-            <li><a id="destinations" href="destinations.html">Destination</a></li>
+            <li><a id="accueil" onclick="loadPage('accueil.html')">Accueil</a></li>
+            <li><a id="destinations" onclick="loadPage('destinations.html')">Destination</a></li>
             <li>
                 <button id="perso" onclick="actionSousMenu('sousMenu1')">Mon espace</button>
                 <div class="sousMenu" id="sousMenu1">
                     <ul class="flex column">
-                        <li><a id="connexion" href="perso.html#connexion">Connexion</a></li>
+                        <li><a id="connexion" onclick="loadPage('perso.html')">Connexion</a></li>
                         <li>
                             <button id="infos" onclick="actionSousMenu('sousMenu1-1')">Mes informations</button>
                             <div class="sousMenu sousMenu1" id="sousMenu1-1">
                                 <ul>
-                                    <li><a href="perso.html">Nom et prénom</a></li>
-                                    <li><a href="perso.html">Numéro de téléphone</a></li>
-                                    <li><a href="perso.html">Email</a></li>
+                                    <li><a onclick="loadPage('perso.html')">Nom et prénom</a></li>
+                                    <li><a onclick="loadPage('perso.html')">Numéro de téléphone</a></li>
+                                    <li><a onclick="loadPage('perso.html')">Email</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a id="msg" href="perso.html#messages">Messagerie</a></li>
-                        <li><a id="hist" href="perso.html#historique">Historique</a></li>
+                        <li><a id="msg" onclick="loadPage('perso.html')">Messagerie</a></li>
+                        <li><a id="hist" onclick="loadPage('perso.html')">Historique</a></li>
                     </ul>
                 </div>
             </li>
@@ -31,12 +31,12 @@
                 <button id="voyage" onclick="actionSousMenu('sousMenu2')">Voyage virtuel</button>
                 <div class="sousMenu" id="sousMenu2">
                     <ul class="flex column">
-                        <li><a id="voyageAudio" href="voyageAudio.html">Voyage audio</a></li>
-                        <li><a id="voyageVideo" href="voyageVideo.html">Voyage vidéo</a></li>
+                        <li><a id="voyageAudio" onclick="loadPage('voyageAudio.html')">Voyage audio</a></li>
+                        <li><a id="voyageVideo" onclick="loadPage('voyageVideo.html')">Voyage vidéo</a></li>
                     </ul>
                 </div>
             </li>
-            <li><a id="contact" href="contact.html">Contactez-nous</a></li>
+            <li><a id="contact" onclick="loadPage('contact.html')">Contactez-nous</a></li>
         </menu>
     </div>
 </div>

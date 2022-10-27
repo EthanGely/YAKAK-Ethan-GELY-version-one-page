@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>YAKAK - Voyage vidéo</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="shortcut icon" href="../images/logoYakak.svg" type="image/x-icon">
-    <script src="../jquery/3.6.0/jquery.min.js"></script>
-    <script src="../javaScript/initPage.js"></script>
-</head>
-<body>
-
-
 <header id="header"></header>
 
 <div class="content">
@@ -20,7 +7,7 @@
             <br>Bien évidemment, ces voyages sont totalement gratuits car en acceptant les conditions d'utilisations, vous nous avez déjà vendu votre âme.</p>
         <button id="btnWarning" class="btn" onclick="afficherWarning()">L'audio ne se lance pas automatiquement ?</button>
         <p class="warning visuallyHidden">Si vous êtes sur Firefox et que la lecture automatique ne fonctionne pas, cherchez à gauche de l'URL</p>
-        <a href="./voyageAudio.html"><button>Découvrez les voyages audios</button></a>
+        <a onclick="loadPage('voyageAudio.html')"><button>Découvrez les voyages audios</button></a>
     </div>
 
 
@@ -31,7 +18,7 @@
             <p>Prenez votre envol et découvrez la ville sous un nouvel angle. Plongez entre les grattes-ciels et découvrez les rues de New-York City tel un pigeon.</p>
         </div>
         <video width="100%" height="100%" autoplay loop muted preload="auto" controls>
-            <source src="../videos/new-york.mp4" type="video/mp4">
+            <source src="src/include/videos/new-york.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la lecture de cette vidéo. Vous pouvez tout de même profiter du voyage
             audio!
         </video>
@@ -43,7 +30,7 @@
             <p>Plongez-vous dans les rapides Canadiens et défiez les eaux torrentielles. Rassurez-vous, les éclaboussures ne passent pas à travers l'écran.</p>
         </div>
         <video width="100%" height="100%" loop muted preload="auto" controls>
-            <source src="../videos/kayak.mp4" type="video/mp4">
+            <source src="src/include/videos/kayak.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la lecture de cette vidéo. Vous pouvez tout de même profiter du voyage
             audio!
         </video>
@@ -52,5 +39,3 @@
 </div>
 
 <footer id="footer"></footer>
-</body>
-</html>

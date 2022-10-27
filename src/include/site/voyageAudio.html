@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>YAKAK - Voyage audio</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="shortcut icon" href="../images/logoYakak.svg" type="image/x-icon">
-    <script src="../jquery/3.6.0/jquery.min.js"></script>
-    <script src="../javaScript/initPage.js"></script>
-    <script src="./jsTemp.js"></script>
-</head>
-<body>
-
-
 <header id="header"></header>
 
 <div class="content">
@@ -23,7 +9,7 @@
             vous nous avez déjà vendu votre âme.</p>
         <button id="btnWarning" class="btn" onclick="afficherWarning()">L'audio ne se lance pas automatiquement ?</button>
         <p class="warning visuallyHidden">Si vous êtes sur Firefox et que la lecture automatique ne fonctionne pas, cherchez à gauche de l'URL</p>
-        <a href="./voyageVideo.html">
+        <a onclick="loadPage('voyageVideo.html')">
             <button>Découvrez les voyages vidéos</button>
         </a>
     </div>
@@ -34,8 +20,8 @@
             <h2>La montagne n'attends que vous</h2>
             <p>Gravissez des montagnes et écoutez le bruit de la neige craquer sous vous pas.</p>
         </div>
-        <img src="../images/montagnes.jpg" alt="Montagnes enneigées" class="imgAudio">
-        <audio src="../audio/montagnes.mp3" controls autoplay></audio>
+        <img src="src/include/images/montagnes.jpg" alt="Montagnes enneigées" class="imgAudio">
+        <audio src="src/include/audio/montagnes.mp3" controls autoplay></audio>
     </div>
 
     <div class="audioContent">
@@ -43,8 +29,8 @@
             <h2>Réchauffez vous au coin du feu</h2>
             <p>Préparez-vous un grand bol de chocolat chaud, et détendez-vous au coin d'un chaleureux feu de bois.</p>
         </div>
-        <img src="../images/fireplace.jpg" alt="Cheminée chaleureuse" class="imgAudio">
-        <audio src="../audio/fireplace.mp3" controls></audio>
+        <img src="src/include/images/fireplace.jpg" alt="Cheminée chaleureuse" class="imgAudio">
+        <audio src="src/include/audio/fireplace.mp3" controls></audio>
     </div>
 
     <div class="audioContent">
@@ -53,12 +39,10 @@
             <p>Autumn is coming. Ecoutez le bruit du vent souffler dans les arbres, sans avoir besoin de nettoyer les
                 feuilles tombées dans votre piscine.</p>
         </div>
-        <img src="../images/wind.jpg" alt="Moulin à vent" class="imgAudio">
-        <audio src="../audio/wind.wav" controls></audio>
+        <img src="src/include/images/wind.jpg" alt="Moulin à vent" class="imgAudio">
+        <audio src="src/include/audio/wind.wav" controls></audio>
     </div>
 
 </div>
 
 <footer id="footer"></footer>
-</body>
-</html>
